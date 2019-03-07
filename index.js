@@ -1,3 +1,6 @@
+// console.log(process.env); hien bien moi truong
+require('dotenv').config();//khai bao tren dau tien
+// console.log(process.env.SESSION_SECRET);
 var express = require('express');
 var bodyParser = require('body-parser');
 var cookieParser=require('cookie-parser');
@@ -16,7 +19,7 @@ app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({
   extended: true
 })); // for parsing application/x-www-form-urlencoded
-app.use(cookieParser('trandanglam'));//signed cookie,de doc duoc noi dung cua cookie gui len
+app.use(cookieParser(process.env.SESSION_SECRET));//signed cookie,de doc duoc noi dung cua cookie gui len
 app.use(express.static('public'));//tao duong dan static
 app.use('/users',authMiddleware.requireAuth,userRoute);
 app.use('/auth',authRoute);

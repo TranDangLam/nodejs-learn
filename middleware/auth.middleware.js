@@ -10,6 +10,6 @@ module.exports.requireAuth=function(req,res,next){
     res.redirect('/auth/login');
     return;
   }
-  res.locals.user=user;
+  res.locals.user=user;//luu user vao bien local de hien thi ten nguoi dang nhap
   next();
 };
