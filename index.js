@@ -16,7 +16,7 @@ app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({
   extended: true
 })); // for parsing application/x-www-form-urlencoded
-app.use(cookieParser());//de doc duoc noi dung cua cookie gui len
+app.use(cookieParser('trandanglam'));//signed cookie,de doc duoc noi dung cua cookie gui len
 app.use(express.static('public'));//tao duong dan static
 app.use('/users',authMiddleware.requireAuth,userRoute);
 app.use('/auth',authRoute);
