@@ -1,0 +1,12 @@
+extends ../layouts/mainContent.pug
+block content
+  h1 Product list
+
+    each product in products
+      .container
+        .card(style='width: 18rem;')
+          img.card-img-top(src=product.image, alt='...')
+          .card-body
+            h5.card-title=product.name
+            p.card-text=product.description
+            a.btn.btn-primary(href='#') Go somewhere

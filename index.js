@@ -10,6 +10,7 @@ var app = express();
 var userRoute = require('./routes/user.route');
 var authRoute=require('./routes/auth.route');
 var authMiddleware=require('./middleware/auth.middleware');
+var productRoute=require('./routes/product.route');
 app.set('view engine', 'pug');
 app.set('views', './views');
 app.get('/', function (req, res) {
@@ -23,6 +24,7 @@ app.use(cookieParser(process.env.SESSION_SECRET));//signed cookie,de doc duoc no
 app.use(express.static('public'));//tao duong dan static
 app.use('/users',authMiddleware.requireAuth,userRoute);
 app.use('/auth',authRoute);
+app.use('/products',productRoute);
 app.listen(port, function () {
   console.log('server is running on 3000 port');
 });
