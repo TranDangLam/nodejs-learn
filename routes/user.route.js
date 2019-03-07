@@ -3,7 +3,7 @@ var router = express.Router();
 //require user controller
 var controller=require('../controllers/user.controller');
 var validate=require('../validate/user.validate');
-router.get('/', controller.index);
+router.get('/',controller.index);//phai chya qua middle ware truoc roi moi vao dc trang user
 router.get('/cookie',function(req,res,next){
   res.cookie('user-id',12345);
   res.send('hello');
