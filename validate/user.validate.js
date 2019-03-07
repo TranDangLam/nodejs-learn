@@ -13,5 +13,7 @@ module.exports.postCreate=function(req,res,next){
     });
     return;
   }
+  res.locals.success=true;//bien local dung de luu tru trong vong doi req,res
   next();//de thoat ra neu k se treo 
+
 };
