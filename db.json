@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Tran Dang",
+      "phone": "123123123",
+      "email": "trandanglam.exs@gmail.com",
+      "password": "12345"
+    },
+    {
+      "name": "Hello",
+      "phone": "09123123123",
+      "id": "2",
+      "email": "hello.exs@gmail.com",
+      "password": "12345"
+    },
+    {
+      "name": "123",
+      "phone": "2",
+      "id": "3",
+      "email": "test.exs@gmail.com",
+      "password": "12345"
+    }
+  ]
+}
