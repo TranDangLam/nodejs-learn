@@ -1,5 +1,7 @@
 var express = require('express');
+var multer=require('multer');
 var router = express.Router();
+var upload=multer({dest:'./public/uploads/'})
 //require user controller
 var controller=require('../controllers/user.controller');
 var validate=require('../validate/user.validate');
@@ -10,6 +12,7 @@ router.get('/cookie',function(req,res,next){
 });
 router.get('/search', controller.search);
 router.get('/create', controller.getCreate);
-router.post('/create', validate.postCreate,controller.postCreate);
+router.post('/create', upload.single('avatar'),validate.postCreate,controller.postCreate);
+//check file avatar gui tu duoi client len
 router.get('/:id', controller.id);
 module.exports = router;
