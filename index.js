@@ -2,8 +2,10 @@
 require('dotenv').config();//khai bao tren dau tien
 // console.log(process.env.SESSION_SECRET);
 var express = require('express');
+var multer=require('multer');
 var bodyParser = require('body-parser');
 var cookieParser=require('cookie-parser');
+var upload=multer({dest:'./public/uploads/'})
 var port = 3000;
 var db = require('./db');
 var app = express();
