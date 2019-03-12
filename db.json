@@ -533,5 +533,13 @@
       "description": "nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est"
     }
   ],
-  "sessions": []
+  "sessions": [
+    {
+      "id": "E27oqWFo8",
+      "cart": {
+        "c3b09870-bdc6-4651-99f1-c6e0f0e0479d": 2,
+        "3512ca2b-1a56-4105-9111-ba2023c78e70": 1
+      }
+    }
+  ]
 }

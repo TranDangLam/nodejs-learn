@@ -29,7 +29,7 @@ app.use(express.static('public'));//tao duong dan static
 app.use('/users',authMiddleware.requireAuth,userRoute);
 app.use('/auth',authRoute);
 app.use('/products',productRoute);
-app.use('/routes',cartRoute);
+app.use('/cart',cartRoute);
 app.listen(port, function () {
   console.log('server is running on 3000 port');
 });
