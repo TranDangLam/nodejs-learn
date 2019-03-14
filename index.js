@@ -17,7 +17,7 @@ var authRoute=require('./routes/auth.route');
 var authMiddleware=require('./middleware/auth.middleware');
 var productRoute=require('./routes/product.route');
 var cartRoute=require('./routes/cart.route');
-
+var apiProductRoute=require('./api/routes/product.route');
 app.set('view engine', 'pug');
 app.set('views', './views');
 app.get('/', function (req, res) {
@@ -34,6 +34,7 @@ app.use('/users',authMiddleware.requireAuth,userRoute);
 app.use('/auth',authRoute);
 app.use('/products',productRoute);
 app.use('/cart',cartRoute);
+app.use('/api/products',apiProductRoute);
 app.listen(port, function () {
   console.log('server is running on 3000 port');
 });

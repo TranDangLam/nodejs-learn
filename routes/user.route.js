@@ -1,7 +1,7 @@
 var express = require('express');
 var multer=require('multer');
 var router = express.Router();
-var upload=multer({dest:'./public/uploads/'})
+var upload=multer({dest:'./public/uploads/'});
 //require user controller
 var controller=require('../controllers/user.controller');
 var validate=require('../validate/user.validate');
