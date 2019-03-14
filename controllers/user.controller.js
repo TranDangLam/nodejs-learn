@@ -6,6 +6,7 @@ module.exports.index=function (req, res) {
     users: db.get('users').value()
   });
 };
+var User=require('../models/user.model')
 module.exports.search=function (req, res) {
   var q = req.query.q;
   var matchedUsers = db.get('users').value().filter(function (user) {
