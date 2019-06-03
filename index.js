@@ -9,7 +9,7 @@ mongoose.connect(process.env.MONGO_URL);
 
 
 var port = 3000;
-var db = require('./db');
+// var db = require('./db');
 var app = express();
 var sessionMiddleware=require('./middleware/session.middleware');
 var userRoute = require('./routes/user.route');
